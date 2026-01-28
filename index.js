@@ -31,8 +31,20 @@ function handlceClickDraw(){
         const remainingCards = data.remaining
         document.getElementById('header').innerText=`Remaining Cards: ${remainingCards}`
 
+        
+
         const winner = determineWinner(data.cards[0],data.cards[1]);
-        const scoreBoard = document.getElementById('score-board')
+        if(winner==="Computer"){
+            score1+=1
+            document.getElementById('currentWinner').innerText="Computer Wins This Round!"
+        }else if(winner=="Surya"){
+            score2+=1
+            document.getElementById('currentWinner').innerText="Surya(YOU) Wins This Round!"
+        }else{
+            document.getElementById('currentWinner').innerText="It's a Tie This Round!"
+        }
+        
+        const scoreBoard = document.getElementById('score-board').innerText=`Computer Score: ${score1} | Surya(YOU) Score: ${score2}`
         if(remainingCards===0){
             Draw.disabled=true
             Draw.innerText="Game Over! No More Cards Left"
