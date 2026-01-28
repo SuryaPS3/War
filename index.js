@@ -1,5 +1,6 @@
 const NewDeck = document.getElementById('New-Deck')
 const Draw = document.getElementById('Draw')
+const cardsContainer = document.getElementById('image-container')
 
 let deckId = ''
 
@@ -18,10 +19,13 @@ function handlceClickDraw(){
     .then(res=>res.json())
     .then(data=>{
         console.log(data)
-        document.getElementById("image-container").innerHTML=`
+        cardsContainer.children[0].innerHTML=`
         <img src="${data.cards[0].image}"/>
+        `
+        cardsContainer.children[1].innerHTML=`
         <img src="${data.cards[1].image}"/>
         `
+        
     })
 }
 Draw.addEventListener("click",handlceClickDraw);
