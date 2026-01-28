@@ -38,6 +38,8 @@ function handlceClickDraw(){
         
         
     })
+
+}
 function determineWinner(card1,card2){
     const valueOptions = ["2","3","4","5","6","7","8","9","10","JACK","QUEEN","KING","ACE"]
     const card1ValueIndex = valueOptions.indexOf(card1.value)
@@ -50,5 +52,5 @@ function determineWinner(card1,card2){
         return "It's a Tie!"
     }
 }
-}
+
 Draw.addEventListener("click",handlceClickDraw);
