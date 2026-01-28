@@ -3,6 +3,8 @@ const Draw = document.getElementById('Draw')
 const cardsContainer = document.getElementById('image-container')
 
 let deckId = ''
+let score1 = 0
+let score2 = 0
 
 function handleClickNewDeck(){
     fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
@@ -30,6 +32,7 @@ function handlceClickDraw(){
         document.getElementById('header').innerText=`Remaining Cards: ${remainingCards}`
 
         const winner = determineWinner(data.cards[0],data.cards[1]);
+        const scoreBoard = document.getElementById('score-board')
         if(remainingCards===0){
             Draw.disabled=true
             Draw.innerText="Game Over! No More Cards Left"
@@ -45,11 +48,11 @@ function determineWinner(card1,card2){
     const card1ValueIndex = valueOptions.indexOf(card1.value)
     const card2ValueIndex = valueOptions.indexOf(card2.value)
     if(card1ValueIndex>card2ValueIndex){
-        return "Sara Wins!"
+        return "Sara"
     }else if(card1ValueIndex<card2ValueIndex){
-        return "Surya Wins!"
+        return "Surya"
     }else{
-        return "It's a Tie!"
+        return "Tie"
     }
 }
 
