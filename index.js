@@ -43,12 +43,22 @@ function handlceClickDraw(){
     })
 
 }
+
+function determinaFinalWinner(score1,score2){
+    if(score1>score2){
+        return "Computer is the Final Winner!"
+    }else if(score1<score2){
+        return "Surya(YOU) is the Final Winner!"
+    }else{
+        return "It's a Tie!"
+    }
+}
 function determineWinner(card1,card2){
     const valueOptions = ["2","3","4","5","6","7","8","9","10","JACK","QUEEN","KING","ACE"]
     const card1ValueIndex = valueOptions.indexOf(card1.value)
     const card2ValueIndex = valueOptions.indexOf(card2.value)
     if(card1ValueIndex>card2ValueIndex){
-        return "Sara"
+        return "Computer"
     }else if(card1ValueIndex<card2ValueIndex){
         return "Surya"
     }else{
