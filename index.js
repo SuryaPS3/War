@@ -51,10 +51,11 @@ async function handlceClickDraw(){
         }
         
         const scoreBoard = document.getElementById('score-board').innerText=`Computer Score: ${score1} | Surya(YOU) Score: ${score2}`
+        const finalWinner = determinaFinalWinner(score1,score2)
         if(remainingCards===0){
             Draw.disabled=true
             Draw.innerText="Game Over! No More Cards Left"
-            document.getElementById('header').innerText=`${winner}`
+            document.getElementById('header').innerText=`${finalWinner}`
         }
         
         
