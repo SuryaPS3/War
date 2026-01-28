@@ -8,44 +8,27 @@ body{
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
-    gap: 30px;
-    font-family: Arial, sans-serif;
+    /* justify-content: center; */
+    min-height:100vh;
+    background-image: url('table.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+
 }
 
 button{
     background-color: rgb(255, 226, 63);
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    border: 2px solid #333;
-    transition: all 0.3s;
+    background-size: cover;
 }
 
-button:hover {
-    background-color: rgb(255, 240, 100);
-    transform: scale(1.05);
+button#New-Deck {
+    font-size: 1.2em;
+    padding: 5px;
+    align-self: stretch;
 }
-
-button:active {
-    transform: scale(0.95);
-}
-
-.image-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    min-height: 300px;
-}
-
-.image-container img {
-    max-width: 200px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+button#Draw {
+    font-size: 1.2em;
+    padding: 5px;
+    align-self: stretch;
 }
