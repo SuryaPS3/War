@@ -2,19 +2,31 @@
     margin:0px;
     padding:0px;
     border:0px;
+    font-family: sans-serif;
 }
 
 body{
+    color: white;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1em;
     display:flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: space-between;
     min-height:100vh;
     background-image: url('table.png');
     background-size:cover;
     background-repeat:no-repeat;
     background-attachment: fixed;
+    cursor:pointer;
+}
 
+h2{
+    color: white;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px #000000;
+    margin-top: 20px;
 }
 
 button{
@@ -23,12 +35,42 @@ button{
 }
 
 button#New-Deck {
+    align-self: flex-start;
     font-size: 1.2em;
-    padding: 5px;
-    align-self: stretch;
+    padding: 10px;
+    
 }
+
 button#Draw {
     font-size: 1.2em;
-    padding: 5px;
+    padding: 20px;
+    
     align-self: stretch;
+}
+
+#image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.card-slot {
+    width: calc(300px*5/7);
+    height: 300px;
+    background-image: url('back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.card-slot:nth-of-type(1){
+    margin-bottom: 50px;
+}
+img.card {
+    width: 100%;
+    height: 100%;
 }
